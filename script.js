@@ -12,3 +12,28 @@ fetch(`${appURL}/users`)
       users.appendChild(item);
     });
   });
+
+document.querySelector("#register").addEventListener("click", () => {
+  const name = document.querySelector("#name").value;
+  const email = document.querySelector("#email").value;
+
+  fetch(`${appURL}/users`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+
+    body: JSON.stringify({
+      name: name,
+      email: email,
+    }),
+  })
+    .then((response) => response.json())
+    .then((user) => {
+      const item = document.createElement("li");
+
+      item.innerHTML = `<b>Nome: </b> ${user.name} <b>E-mail: </b> ${user.email} <button onclick(remove(user._id)) class="delete">X</button>`;
+
+      users.appendChild(item);
+    });
+});
