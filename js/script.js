@@ -1,5 +1,5 @@
 const users = document.querySelector("#user-list");
-const appURL = "https://crudcrud.com/api/c091b19d38574f6ea6ab801079591acf";
+const appURL = "https://crudcrud.com/api/c63871f5adc1495ab52d5c2ed589c543";
 
 fetch(`${appURL}/users`)
   .then((response) => response.json())
@@ -8,7 +8,7 @@ fetch(`${appURL}/users`)
       const item = document.createElement("li");
       item.id = `user-${user._id}`;
 
-      item.innerHTML = `<b>Nome: </b> ${user.name} <b>E-mail: </b> ${user.email} <button onclick="remove('${user._id}')" class="delete">X</button>`;
+      item.innerHTML = `<div class="userListName"> <b>Nome: </b> ${user.name}</div> <div class="emailListName"><b>E-mail: </b> ${user.email}</div> <button onclick="remove('${user._id}')" class="delete">X</button>`;
 
       users.appendChild(item);
       console.log(user);

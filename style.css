@@ -1,0 +1,60 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  margin: 800px;
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: aqua;
+  border-radius: 5px;
+}
+
+header {
+  padding-top: 10px;
+}
+
+form {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+button#register {
+  height: 40px;
+  line-height: 30px;
+}
+
+label,
+input,
+button {
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+input {
+  text-align: center;
+  height: 40px;
+}
+
+ul {
+  list-style: none;
+  background-color: aliceblue;
+}
+
+ul#user-list>li>div {
+  display: inline;
+  margin-right: 10%;
+}
+
+ul#user-list>li>button {
+  border-radius: 5px;
+  width: 50px;
+  height: 30px;
+  margin-bottom: 10px;
+}
