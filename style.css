@@ -42,6 +42,12 @@ input {
   height: 40px;
 }
 
+input:focus {
+  background-color: #7e8185;
+  color: rgb(5, 5, 5);
+  transition: .5s;
+}
+
 ul {
   list-style: none;
   background-color: aliceblue;
